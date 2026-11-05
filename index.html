@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Video Mini App</title>
+    <!-- Telegram WebApp JS -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: var(--tg-theme-bg-color, #ffffff);
+            color: var(--tg-theme-text-color, #000000);
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+        }
+        .video-container {
+            margin-top: 20px;
+            width: 100%;
+        }
+        video {
+            width: 100%;
+            max-height: 300px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>টেলিগ্রাম চ্যানেল ভিডিও প্লেয়ার</h2>
+    <p>আপনার চ্যানেলের ভিডিও নিচে দেখতে পাবেন:</p>
+
+    <div class="video-container">
+        <!-- এখানে আপনার ভিডিওর ডিরেক্ট লিংক বা স্ট্রিম বসবে -->
+        <video id="channelVideo" controls poster="">
+            <source src="YOUR_VIDEO_STREAM_URL" type="video/mp4">
+            আপনার ব্রাউজার ভিডিও ট্যাগ সমর্থন করে না।
+        </video>
+    </div>
+
+    <script>
+        // টেলিগ্রাম ওয়েব অ্যাপ ইনিশিয়ালাইজ করা
+        let tg = window.Telegram.WebApp;
+        tg.expand(); // ফুল স্ক্রিন করতে সাহায্য করে
+    </script>
+</body>
+</html>
